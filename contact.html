@@ -17,7 +17,14 @@
   <a class="skip-link" href="#main">Skip to main content</a>
   <header class="site-header"><div class="wrap header-inner">
     <a class="brand" href="index.html" aria-label="FORM home" translate="no"><img class="brand-logo" src="images/brand/logo-wordmark-dark.svg" alt="FORM" width="240" height="64"></a>
-    <nav class="main-nav" aria-label="Main navigation">
+    <!-- HTML popover supplies mobile open/close and Escape without JavaScript. -->
+    <button class="mobile-menu-toggle" type="button" popovertarget="main-navigation" aria-label="Open navigation">
+      <svg width="28" height="24" viewBox="0 0 28 24" fill="currentColor" aria-hidden="true" focusable="false"><circle cx="5" cy="12" r="2"></circle><circle cx="14" cy="12" r="2"></circle><circle cx="23" cy="12" r="2"></circle></svg>
+    </button>
+    <nav class="main-nav" id="main-navigation" aria-label="Main navigation" popover="auto">
+        <button class="mobile-menu-close" type="button" popovertarget="main-navigation" popovertargetaction="hide" aria-label="Close navigation">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false"><path d="m5 5 14 14M19 5 5 19"></path></svg>
+        </button>
         <a href="index.html">Home</a>
         <a href="category-1.html">Collection</a>
         <a href="about.html">About</a>

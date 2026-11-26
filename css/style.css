@@ -264,3 +264,70 @@ input:user-invalid, textarea:user-invalid { border: 2px dashed #111111; }
   white-space: nowrap;
   border: 0;
 }
+
+/* Mobile navigation: one native popover and the same four links at every size.
+   Browsers without Popover retain the visible wrapped navigation above. */
+.mobile-menu-toggle, .mobile-menu-close { display: none; }
+.main-nav[popover] {
+  position: static;
+  inset: auto;
+  width: auto;
+  height: auto;
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  overflow: visible;
+  background: transparent;
+  color: inherit;
+}
+@supports selector(:popover-open) {
+  @media (max-width: 44rem) {
+    .header-inner { flex-wrap: nowrap; justify-content: space-between; gap: 1rem; }
+    .header-inner > .brand { max-width: calc(100% - 4rem); }
+    .mobile-menu-toggle, .mobile-menu-close {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex: 0 0 48px;
+      width: 48px;
+      height: 48px;
+      padding: 0;
+      border: 0;
+      background: var(--bg);
+      color: var(--ink);
+    }
+    .mobile-menu-toggle:hover, .mobile-menu-close:hover { color: #62625f; }
+    .main-nav[popover] { display: none; }
+    .main-nav[popover]:popover-open {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      align-items: flex-start;
+      justify-content: flex-start;
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100vh;
+      height: 100dvh;
+      padding: max(5rem, env(safe-area-inset-top)) max(2rem, env(safe-area-inset-right)) max(2rem, env(safe-area-inset-bottom)) max(4rem, env(safe-area-inset-left));
+      gap: 0.75rem;
+      overflow-y: auto;
+      overscroll-behavior: contain;
+      background: var(--bg);
+    }
+    .main-nav a { font-size: 1.5rem; line-height: 1.4; }
+    .mobile-menu-close { position: fixed; top: max(1rem, env(safe-area-inset-top)); left: max(1rem, env(safe-area-inset-left)); }
+    body:has(.main-nav:popover-open) { overflow: hidden; }
+    body:has(.main-nav:popover-open) > .skip-link,
+    .site-header:has(.main-nav:popover-open) .brand,
+    .site-header:has(.main-nav:popover-open) .mobile-menu-toggle,
+    .site-header:has(.main-nav:popover-open) ~ main,
+    .site-header:has(.main-nav:popover-open) ~ footer { visibility: hidden; }
+  }
+  /* An open phone menu remains aligned with the header after rotation. */
+  @media (min-width: 44.001rem) {
+    .main-nav[popover]:popover-open { position: absolute; top: 5.5rem; left: 50%; right: auto; width: max-content; max-width: calc(100% - 4rem); transform: translateX(-50%); }
+  }
+}

@@ -44,7 +44,7 @@ All ten Collection cards include the original image, title and peso price inside
 ## Explain all three CSS methods
 
 1. **External:** every page links exactly to `<link rel="stylesheet" href="css/style.css">`. It defines the shared white layout, colors, typography, navigation, footer, responsive Grid/Flexbox cards and interaction styling.
-2. **Internal:** `index.html` has a commented `<style>` block in its head. `.home-hero` defines the home-only two-column grid and background, with a stacking rule below 800px.
+2. **Internal:** `index.html` has a commented `<style>` block in its head. `.home-hero` defines the home-only full-width image layout and background. Its `.hero-copy` places the title/tagline beside the collection link, stacking that copy below 600px.
 3. **Inline:** the Home tagline uses `style="letter-spacing: 0.02em;"`. This is a small, intentional one-off tracking override for that promotional line, identified by a source comment. Most styling remains external.
 
 For normal declarations, inline styling takes precedence over ordinary stylesheet rules for the same property. When specificity is equal, later rules override earlier ones: a page-specific internal rule after the external link can specialize a shared rule. These examples need no `!important`; the existing reduced-motion override uses it to honor that preference.
@@ -58,6 +58,10 @@ The Contact form uses a non-modal open `<dialog>` and `<form method="dialog">`. 
 ## Design and photography
 
 FORM uses the existing dark geometric wordmark on white, Bebas Neue headings and Arial body copy. The header has no divider. Navigation stays gray when inactive and black for the current section; Collection remains active on product pages. Keyboard focus remains visible. The grayscale editorial hero and gray-to-black View collection link are retained with no underline.
+
+On phones up to 44rem, FORM sits left and a three-dot navigation button sits right. The button opens the same four uppercase links in a full-screen white native HTML popover, with a labeled close button. The browser handles Enter/Space, Escape, and focus restoration; CSS hides the background controls while open. No JavaScript is used. At wider sizes the same navigation is shown inline and centered in the 224 px tall header. The logo is up to 224 px wide and shrinks with its available column.
+
+The compact menu requires native Popover support (current Chromium, Firefox and Safari/iOS 18.3+). In older browsers without it, the four links stay visible and wrapped beneath the logo; the unsupported menu button stays hidden. This CSS-only fallback preserves navigation without adding a polyfill or script. The open menu also adapts to landscape rotation.
 
 Current lead photography uses the existing 4:5 frames and individual CSS framing. No original photo files were changed in the copy pass. The two strongest flat Raf images have additional padding; the porcelain vest trims spare studio space at scale 1.12. Remaining side/mannequin views were previously accepted by the student. Product colors are not filtered; only the editorial hero is grayscale. Middleman Store was a visual reference, not an image source.
 
@@ -80,10 +84,10 @@ The restricted Sites preview is a working review site; it does not replace the r
 | HTML5 structure and completeness — 20 | Home, one category, About, Contact and ten product pages; semantic landmarks and relative links | Source checked; no score guaranteed |
 | Three CSS methods — 25 | Shared stylesheet, Home head style, Home tagline inline tracking; code comments and explanation above | Source checked |
 | Catalog depth — 25 | One approved solo category, 10 products with images, titles, peso prices and clickable cards; full descriptions on product pages | Source checked; card descriptions and named-action wording omitted at student request |
-| UI/UX and responsiveness — 15 | Existing white theme, focus, contrast, 4:5 image handling, Grid/Flexbox and responsive rules | Source checked; browser/device verification pending |
+| UI/UX and responsiveness — 15 | Existing white theme, focus, contrast, 4:5 image handling, Grid/Flexbox and responsive rules | Source and local Chromium responsive navigation checks passed; physical-device testing pending |
 | GitHub and Vercel — 15 | Public repository and production URL verified; GitHub upload commit automatically deployed on Vercel | Hosting verified; genuine student coding contribution evidence pending |
 
-Personal details, submission-sheet completion and genuine contribution history remain unverified. No browser controls are available in this managed session, so phone/iPad/desktop rendering, zoom layouts and interactive Contact submission are not claimed as tested. Source checks do not prove visual layout or publication success; live files are checked separately after restricted-preview publishing.
+Personal details, submission-sheet completion and genuine contribution history remain unverified. The current navigation passed local Chromium checks at 320, 390, 704, 705, 768, 1024 and 1440 px widths, including full-screen phone presentation, Enter/Escape/close behavior, focus restoration, product navigation, active sections, and open-menu rotation to desktop and back. All fifteen pages passed phone menu open/close checks. These are viewport simulations; physical iPhone/iPad Safari and assistive-technology testing remain pending. Live source files are verified separately after deployment.
 
 ## Local image, logo and font sources
 
