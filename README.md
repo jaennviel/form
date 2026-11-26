@@ -52,7 +52,7 @@ For normal declarations, inline styling takes precedence over ordinary styleshee
 
 ## Developer and course notes
 
-About uses a narrow text column, a short FORM story, a collection link, and a compact member credit: Jaenn Viel F. Francisco, section CS001 - 2, GitHub username jaennviel, and Project owner for Designer Archive. The required story and member role remain. The repeated garment photo and its on-page credit were removed from About together; the licensed photograph and its full credit remain on its product page and in the source log. Actual contributions belong in the submission sheet and the student’s genuine GitHub history.
+About presents original manifesto copy under “Our point of view” and “Look beyond the label.” The text uses a bold Arial statement (40–64 px) and larger regular Arial body copy (20–26 px), scaling with the root font size. A collection link follows, along with a compact member credit: Jaenn Viel F. Francisco, section CS001 - 2, GitHub username jaennviel, and Project owner for Designer Archive. The required story and member role remain. The repeated garment photo and its on-page credit were removed from About together; the licensed photograph and its full credit remain on its product page and in the source log. Actual contributions belong in the submission sheet and the student’s genuine GitHub history.
 
 The Contact form uses a non-modal open `<dialog>` and `<form method="dialog">`. Valid submission closes the dialog without a network request; the adjacent result appears and the Back to form link reloads it. The storefront includes a short no-message-sent note. There is no working cart, checkout, stock system or order processing.
 

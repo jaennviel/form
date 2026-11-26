@@ -352,9 +352,11 @@ input:user-invalid, textarea:user-invalid { border: 2px dashed #111111; }
 .product-notes .image-credit { padding: 0; margin-top: 2rem; }
 @media (forced-colors: active) { .breadcrumb a[aria-current] { text-decoration: underline; } }
 
-/* About follows the storefront's quiet typography and open spacing. */
-.about-story { max-width: 40rem; margin-inline: auto; padding-block: 2rem 4rem; }
-.about-copy { color: var(--muted); font: normal 1rem/1.8 var(--font-body); }
+/* About manifesto: original brand copy with a strong editorial hierarchy. */
+.about-story { max-width: 44rem; margin-inline: auto; padding-block: 2rem 4rem; }
+.about-eyebrow { margin-bottom: 2.5rem; color: var(--muted); font-size: 0.75rem; letter-spacing: 0.04em; text-transform: uppercase; }
+.about-copy { color: var(--ink); font: normal clamp(1.25rem, 1.05rem + 0.75vw, 1.625rem)/1.4 var(--font-body); }
+.about-copy .about-statement { font: bold clamp(2.5rem, 1.75rem + 3vw, 4rem)/1.05 var(--font-body); margin-bottom: 1.5rem; letter-spacing: -0.035em; }
 .about-copy p { margin-bottom: 1.5rem; }
 .about-collection-link { display: inline-flex; align-items: center; min-height: 48px; margin-top: 0.25rem; font-size: 0.9rem; text-decoration: none; color: #62625f; }
 .about-credit { margin-top: 4rem; color: var(--muted); font-size: 0.875rem; line-height: 1.6; }
