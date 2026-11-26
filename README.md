@@ -71,7 +71,7 @@ Current lead photography uses the existing 4:5 frames and individual CSS framing
 6. Test the actual HTTPS deployment on desktop and mobile, then push a genuine later change and confirm continuous deployment works.
 7. Add the verified GitHub and Vercel URLs to the README and submission sheet. Include the completed sheet and project ZIP in the instructor’s submission. A public Vercel production deployment is now verified; nothing has been submitted to the LMS.
 
-The earlier restricted Sites preview is no longer accessible through the current connection. The public GitHub → Vercel deployment is the current review site.
+The restricted Sites preview is a working review site; it does not replace the required public GitHub → Vercel workflow.
 
 ## Source-check status and rubric mapping
 
@@ -80,10 +80,10 @@ The earlier restricted Sites preview is no longer accessible through the current
 | HTML5 structure and completeness — 20 | Home, one category, About, Contact and ten product pages; semantic landmarks and relative links | Source checked; no score guaranteed |
 | Three CSS methods — 25 | Shared stylesheet, Home head style, Home tagline inline tracking; code comments and explanation above | Source checked |
 | Catalog depth — 25 | One approved solo category, 10 products with images, titles, peso prices and clickable cards; full descriptions on product pages | Source checked; card descriptions and named-action wording omitted at student request |
-| UI/UX and responsiveness — 15 | Existing white theme, focus, contrast, 4:5 image handling, Grid/Flexbox and responsive rules | Source and Chromium phone/tablet/desktop viewport checks passed; physical-device testing pending |
+| UI/UX and responsiveness — 15 | Existing white theme, focus, contrast, 4:5 image handling, Grid/Flexbox and responsive rules | Source checked; browser/device verification pending |
 | GitHub and Vercel — 15 | Public repository and production URL verified; GitHub upload commit automatically deployed on Vercel | Hosting verified; genuine student coding contribution evidence pending |
 
-Personal details, submission-sheet completion and genuine contribution history remain unverified. Chromium responsive viewport checks cover 320 × 740, 390 × 844, 768 × 1024, 1024 × 768 and 1440 × 1000. These are browser simulations, not physical iPad/Safari tests. Source checks do not prove publication success; live files are checked separately after deployment.
+Personal details, submission-sheet completion and genuine contribution history remain unverified. No browser controls are available in this managed session, so phone/iPad/desktop rendering, zoom layouts and interactive Contact submission are not claimed as tested. Source checks do not prove visual layout or publication success; live files are checked separately after restricted-preview publishing.
 
 ## Local image, logo and font sources
 
@@ -128,21 +128,12 @@ Only this editorial hero has a CSS grayscale filter. Product files retain their 
 
 ## Current publication and verification — 26 November 2026
 
-The student uploaded the prepared source in commit [21861c4](https://github.com/jaennviel/form/commit/21861c4c52f7ab10187b340ebced87608ba0e544), “Add FORM Designer Archive website and product catalog.” Vercel automatically built that GitHub main-branch commit as a Ready production deployment. Public HTTP checks passed for Home, Collection, About, Contact, all ten product pages, the shared stylesheet, ten product images, the editorial hero and wordmark. All ten card/detail prices match and Back to collection links resolve. Those initial publication checks were HTTP/source checks; the responsive finder checks below were added later.
+The student uploaded the prepared source in commit [21861c4](https://github.com/jaennviel/form/commit/21861c4c52f7ab10187b340ebced87608ba0e544), “Add FORM Designer Archive website and product catalog.” Vercel automatically built that GitHub main-branch commit as a Ready production deployment. Public HTTP checks passed for Home, Collection, About, Contact, all ten product pages, the shared stylesheet, ten product images, the editorial hero and wordmark. All ten card/detail prices match and Back to collection links resolve. No browser/device visual tests or interactive Contact tests are claimed.
 
-An earlier change removed Home’s Featured picks section. The hero, tagline, introduction, collection link, ten Collection cards and product pages are retained. All three commented CSS methods remain: shared external CSS on every page, internal Home hero styling, and inline tagline tracking. Photo files, source credits and license notices are unchanged.
+The latest change removes only Home’s Featured picks section. The hero, tagline, introduction, collection link, ten Collection cards and product pages are retained. All three commented CSS methods remain: shared external CSS on every page, internal Home hero styling, and inline tagline tracking. Photo files, source credits and license notices are unchanged.
 
 The GitHub-to-Vercel connection remains enabled. The student synced the homepage and handoff documents in commit [2b62031](https://github.com/jaennviel/form/commit/2b620317295802b9fe2f73ee9b100f95d30f1cdf), “Remove Featured picks and update project links.” Vercel automatically deployed that commit to production, and public Home and Collection checks matched the reviewed files. The repository and site both omit Featured picks.
 
-The GitHub connector has now been installed and authorized for this account. Repository push permission and a GitHub blob write were both confirmed on 26 November 2026. The previous manual-sync limitation is resolved; future authorized updates can use the normal GitHub-to-Vercel workflow. Authorized storefront updates now use that connection.
+The GitHub connector has now been installed and authorized for this account. Repository push permission and a GitHub blob write were both confirmed on 26 November 2026. The previous manual-sync limitation is resolved; future authorized updates can use the normal GitHub-to-Vercel workflow. This documentation update does not change the storefront.
 
-The submission sheet includes the verified GitHub URL, Vercel URL and username jaennviel. Full name, section, deadline and actual coding contribution record remain for the student to complete. No sharing settings were changed; the earlier restricted preview is currently inaccessible through the connection. No domain was purchased and nothing was submitted for class.
-
-
-## Responsive header and full-screen product finder
-
-The shared header places FORM left, one centered Home/Collection/About/Contact navigation, and Search right on tablet and desktop. At widths of 44rem and below, Search becomes an icon with an accessible text name at the top right; the same navigation sits beneath it. The white header remains divider-free, with gray inactive and black current navigation.
-
-Search opens a native HTML `<details>` disclosure styled as a full-screen white product directory. It lists all ten garments under seven designer headings, linking to the existing dedicated pages. This is linked browsing, not typed keyword filtering: there is no inactive input and no JavaScript, backend or external search service. The native summary changes to Close and toggles with click, Enter or Space. CSS `:has()` hides the background page and its focusable links while open, and locks background scrolling. The directory itself scrolls. The design targets current browsers supporting `:has()` (Safari 15.4+, Chromium 105+, Firefox 121+).
-
-Local Chromium checks passed at all five viewport sizes above: header alignment, no horizontal overflow, viewport-sized overlay, hidden background links, keyboard open/close, foreground Tab navigation, ten product destinations, and return to Collection. Same-page links also close the directory by navigating normally. The existing three commented CSS methods, photos, prices, product descriptions and Contact form remain unchanged. All fifteen pages also passed finder open/close and image-loading checks at the iPad viewport. Contact passed native required-field validation, successful local completion without any submission request, and Back to form reset. Physical iPad/Safari and assistive-technology testing remain pending.
+The submission sheet includes the verified GitHub URL, Vercel URL and username jaennviel. Full name, section, deadline and actual coding contribution record remain for the student to complete. The existing restricted FORM preview retains its access settings. No domain was purchased and nothing was submitted for class.
