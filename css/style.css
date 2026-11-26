@@ -54,15 +54,22 @@ p { margin-bottom: 1rem; }
 .skip-link { position: absolute; top: -10rem; left: 1rem; z-index: 5; background: white; color: black; padding: 0.8rem 1rem; }
 .skip-link:focus { top: 1rem; }
 
-/* 2. One consistent header. Navigation wraps without JavaScript. */
+/* 2. Spacious shared header: centered navigation, with one HTML tree. */
 .site-header { background: var(--bg); color: #111111; }
-.header-inner { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 0.5rem 2rem; padding-block: 1rem; }
+.header-inner { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: center; gap: 1rem; min-height: 14rem; padding-block: 2rem; }
+.header-inner > .brand { justify-self: start; min-width: 0; }
 .brand { display: inline-flex; align-items: center; min-height: 48px; text-decoration: none; }
 .brand-logo { width: 9rem; height: auto; }
 .brand:hover .brand-logo { filter: brightness(1.07); }
-.main-nav { display: flex; flex-wrap: wrap; gap: 0.25rem 1.75rem; }
+.main-nav { grid-column: 2; display: flex; flex-wrap: wrap; justify-content: center; gap: 0.25rem 1.75rem; }
 .main-nav a { display: inline-flex; align-items: center; min-height: 48px; border: 0; text-decoration: none; color: #62625f; font-size: 0.95rem; }
 .main-nav a:hover, .main-nav a[aria-current] { color: #111111; }
+
+/* Keep the same links visible on phones, below the logo. */
+@media (max-width: 44rem) {
+  .header-inner { display: flex; flex-wrap: wrap; align-content: center; min-height: 10rem; padding-block: 1.5rem; }
+  .main-nav { width: 100%; justify-content: space-between; gap: 0.25rem 0.5rem; }
+}
 
 /* 3. Shared actions and products. Grid sets the columns; Flexbox aligns card links. */
 .button { display: inline-flex; justify-content: center; align-items: center; max-width: 100%; min-height: 48px; padding: 0.8rem 1.4rem; border: 1px solid var(--ink); background: var(--ink); color: #ffffff; font-size: 0.9rem; font-weight: bold; text-decoration: none; overflow-wrap: anywhere; }
