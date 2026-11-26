@@ -18,7 +18,7 @@ Solo work is instructor-approved, as confirmed by the student. One real member o
 
 The complete supplied `1-Intro_to_Computing_Web_Design_Ecommerce_Project.docx` was reread on 25 November 2026, including all tables and the 100-point rubric. No storefront sentence is required to say “school project” or repeat the assignment explanation. About must retain the store story and member roles; Contact must retain labels, inputs and a submit button.
 
-The Home blueprint lists “Hero banner, store intro, featured picks, category links.” Featured picks is omitted at the student’s latest explicit request. This is a documented exception to that Home blueprint, not a claim of full compliance. The brief requires a styled “View Details” or “Add to Cart” static link: each Collection card visibly says **View details** inside its single existing product anchor, with no nested link, separate button or fake cart.
+The Home blueprint lists “Hero banner, store intro, featured picks, category links.” Featured picks is omitted at the student’s latest explicit request. This is a documented exception to that Home blueprint, not a claim of full compliance. The brief requires a styled “View Details” or “Add to Cart” static link. At the student’s latest explicit request, the visible View details labels are omitted. Each Collection card remains one styled native link to its own product page, named from the garment heading and with a visible keyboard focus outline. The omitted wording is a documented exception to the brief’s named-action requirement.
 
 ## Files and basic use
 
@@ -39,7 +39,7 @@ brand-guidelines.pdf             Implemented visual identity and usage
 contribution-submission-sheet.pdf Fillable/printable submission and actual-work record
 ```
 
-All ten Collection cards include the original image, title, short description, peso price, and visible View details label. Each single anchor is named from its garment heading plus action label. All dedicated product pages retain the garment description, price, design note, photo attribution and Back to collection link. No garment substitutions from the separate research proposal have been applied.
+All ten Collection cards include the original image, title, short description and peso price inside one clickable card. Each single anchor is named from its garment heading; no separate View details label is displayed. All dedicated product pages retain the garment description, price, design note, photo attribution and Back to collection link. No garment substitutions from the separate research proposal have been applied.
 
 ## Explain all three CSS methods
 
@@ -79,7 +79,7 @@ The restricted Sites preview is a working review site; it does not replace the r
 | --- | --- | --- |
 | HTML5 structure and completeness — 20 | Home, one category, About, Contact and ten product pages; semantic landmarks and relative links | Source checked; no score guaranteed |
 | Three CSS methods — 25 | Shared stylesheet, Home head style, Home tagline inline tracking; code comments and explanation above | Source checked |
-| Catalog depth — 25 | One approved solo category, 10 distinct products with image/title/description/peso price and styled visible View details | Source checked |
+| Catalog depth — 25 | One approved solo category, 10 products with images, titles, descriptions, peso prices and clickable cards | Source checked; named-action wording omitted at student request |
 | UI/UX and responsiveness — 15 | Existing white theme, focus, contrast, 4:5 image handling, Grid/Flexbox and responsive rules | Source checked; browser/device verification pending |
 | GitHub and Vercel — 15 | Public repository and production URL verified; GitHub upload commit automatically deployed on Vercel | Hosting verified; genuine student coding contribution evidence pending |
 
