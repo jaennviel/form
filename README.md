@@ -44,7 +44,7 @@ All ten Collection cards include the original image, title and peso price inside
 ## Explain all three CSS methods
 
 1. **External:** every page links exactly to `<link rel="stylesheet" href="css/style.css">`. It defines the shared white layout, colors, typography, navigation, footer, responsive Grid/Flexbox cards and interaction styling.
-2. **Internal:** `index.html` has a commented `<style>` block in its head. `.home-hero` defines the home-only full-width image layout and background. Its `.hero-copy` places the title/tagline beside the collection link, stacking that copy below 600px.
+2. **Internal:** `index.html` has a commented `<style>` block in its head. `.home-hero` defines the home-only full-width editorial image and centered introduction block. Its `.hero-copy` groups the title, tagline, introduction and collection link in one column. The photo uses a 2:1 crop on wider screens and 4:3 below 600px; the original image and source credit are retained.
 3. **Inline:** the Home tagline uses `style="letter-spacing: 0.02em;"`. This is a small, intentional one-off tracking override for that promotional line, identified by a source comment. Most styling remains external.
 
 For normal declarations, inline styling takes precedence over ordinary stylesheet rules for the same property. When specificity is equal, later rules override earlier ones: a page-specific internal rule after the external link can specialize a shared rule. These examples need no `!important`; the existing reduced-motion override uses it to honor that preference.
