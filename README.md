@@ -52,7 +52,7 @@ For normal declarations, inline styling takes precedence over ordinary styleshee
 
 ## Developer and course notes
 
-About lists Jaenn Viel F. Francisco, section CS001 - 2, GitHub username jaennviel, and the assigned Project owner role. The store story and one-category, ten-product scope are retained. Actual contributions belong in the submission sheet and the student’s genuine GitHub history.
+About uses a narrow text column, a short FORM story, a collection link, and a compact member credit: Jaenn Viel F. Francisco, section CS001 - 2, GitHub username jaennviel, and Project owner for Designer Archive. The required story and member role remain. The repeated garment photo and its on-page credit were removed from About together; the licensed photograph and its full credit remain on its product page and in the source log. Actual contributions belong in the submission sheet and the student’s genuine GitHub history.
 
 The Contact form uses a non-modal open `<dialog>` and `<form method="dialog">`. Valid submission closes the dialog without a network request; the adjacent result appears and the Back to form link reloads it. The storefront includes a short no-message-sent note. There is no working cart, checkout, stock system or order processing.
 
@@ -110,7 +110,7 @@ Each image remains local, with its recorded credit and license. Attribution does
 
 All ten product photograph files: proportion-preserving downsize only (maximum 1200 × 1600 pixels), EXIF orientation correction if needed, RGB conversion and WebP compression. No garment removal, recoloring, retouching or file cropping. Collection and featured images share a stationary 4:5 mat. The lead sequence opens with flat-lay and lighter studio photographs; display and exhibition views follow later. The Margiela vest and textured Raf top use selective CSS framing. Original image files, dedicated detail-page images and photo credits are unchanged. Retained image adaptations are offered under the same image license, including each applicable ShareAlike license; those licenses apply to the photos, not the HTML/CSS or unrelated assets.
 
-About continues to use `form-01.webp`. The home hero is the separately credited editorial rack photograph below. Required Wien Museum citations:
+About is now text-only; `form-01.webp` remains in the Collection and on its dedicated product page. The home hero is the separately credited editorial rack photograph below. Required Wien Museum citations:
 
 Helmut Lang (fashion designer), Damenjacke, 1990–1999, Wien Museum Inv.-Nr. M 22627, CC BY 4.0, Foto: Wien Museum (https://sammlung.wienmuseum.at/en/object/1009506/) Edits: optimized and converted to WebP; no crop.
 

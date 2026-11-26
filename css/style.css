@@ -352,18 +352,15 @@ input:user-invalid, textarea:user-invalid { border: 2px dashed #111111; }
 .product-notes .image-credit { padding: 0; margin-top: 2rem; }
 @media (forced-colors: active) { .breadcrumb a[aria-current] { text-decoration: underline; } }
 
-/* About: a concise store story and an accurate solo member profile. */
-.about-page .story-layout { align-items: start; }
-.about-page .prose { max-width: 38rem; }
-.about-page .prose h2 { font: normal clamp(1.75rem, 1.25rem + 1.5vw, 2.5rem)/1.25 var(--font-body); margin-bottom: 1.5rem; }
-.about-note { margin-top: 2rem; color: var(--muted); }
-.about-member { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; padding-block: 2.5rem 3.5rem; margin-top: 3rem; border-top: 1px solid var(--line); }
-.about-member > * { min-width: 0; }
-.about-member > h2 { font: normal 1rem/1.6 var(--font-body); margin: 0; color: var(--muted); }
-.about-member h3 { font: normal clamp(1.25rem, 1rem + 0.75vw, 1.75rem)/1.35 var(--font-body); margin-bottom: 1.5rem; }
-.member-details { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: 0.5rem 1.5rem; margin: 0; }
-.member-details dt { color: var(--muted); }
-.member-details dd { margin: 0; overflow-wrap: anywhere; }
-.member-responsibilities { max-width: 34rem; margin: 1.5rem 0 0; font-size: 0.875rem; }
-@media (max-width: 800px) { .about-member { gap: 2rem; } }
-@media (max-width: 600px) { .about-member { grid-template-columns: minmax(0, 1fr); gap: 1rem; margin-top: 2rem; padding-block: 2rem 2.5rem; } }
+/* About follows the storefront's quiet typography and open spacing. */
+.about-story { max-width: 40rem; margin-inline: auto; padding-block: 2rem 4rem; }
+.about-copy { color: var(--muted); font: normal 1rem/1.8 var(--font-body); }
+.about-copy p { margin-bottom: 1.5rem; }
+.about-collection-link { display: inline-flex; align-items: center; min-height: 48px; margin-top: 0.25rem; font-size: 0.9rem; text-decoration: none; color: #62625f; }
+.about-credit { margin-top: 4rem; color: var(--muted); font-size: 0.875rem; line-height: 1.6; }
+.about-credit h2 { font: normal 1rem/1.6 var(--font-body); color: var(--ink); margin-bottom: 0.25rem; }
+.about-credit p { margin-bottom: 0.25rem; }
+.about-credit a { display: inline-flex; align-items: center; min-height: 44px; color: #62625f; text-decoration: none; }
+.about-collection-link:hover, .about-collection-link:focus-visible, .about-collection-link:active,
+.about-credit a:hover, .about-credit a:focus-visible, .about-credit a:active { color: var(--ink); text-decoration: none; }
+@media (max-width: 600px) { .about-story { padding-block: 1rem 3rem; } .about-credit { margin-top: 3rem; } }
