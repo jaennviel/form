@@ -341,7 +341,7 @@ input:user-invalid, textarea:user-invalid { border: 2px dashed #111111; }
 .breadcrumb li + li::before { content: ""; display: block; width: 0.35rem; height: 0.35rem; flex: 0 0 0.35rem; border-top: 1px solid currentColor; border-right: 1px solid currentColor; transform: rotate(45deg); }
 .breadcrumb a, .adjacent-products a { display: inline-flex; align-items: center; min-height: 44px; color: #62625f; font-size: 0.875rem; line-height: 1.5; text-decoration: none; overflow-wrap: anywhere; }
 .breadcrumb a[aria-current] { color: var(--ink); font-weight: normal; }
-.breadcrumb a:hover, .breadcrumb a:focus-visible, .adjacent-products a:hover, .adjacent-products a:focus-visible { color: var(--ink); text-decoration: underline; }
+.breadcrumb a:hover, .breadcrumb a:focus-visible, .breadcrumb a:active, .adjacent-products a:hover, .adjacent-products a:focus-visible, .adjacent-products a:active { color: var(--ink); text-decoration: none; }
 .adjacent-products { display: flex; flex: 0 0 auto; align-items: center; gap: 0.75rem; }
 .product-nav-divider { color: #62625f; font-size: 0.875rem; }
 .adjacent-products a { gap: 0.3rem; }
