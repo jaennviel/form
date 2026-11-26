@@ -54,14 +54,14 @@ p { margin-bottom: 1rem; }
 .skip-link { position: absolute; top: -10rem; left: 1rem; z-index: 5; background: white; color: black; padding: 0.8rem 1rem; }
 .skip-link:focus { top: 1rem; }
 
-/* 2. Spacious shared header: centered navigation, with one HTML tree. */
+/* 2. Spacious shared header: right-aligned navigation, with one HTML tree. */
 .site-header { background: var(--bg); color: #111111; }
-.header-inner { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: center; gap: 1rem; min-height: 14rem; padding-block: 2rem; }
+.header-inner { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 1rem; min-height: 14rem; padding-block: 2rem; }
 .header-inner > .brand { justify-self: start; min-width: 0; max-width: 100%; }
 .brand { display: inline-flex; align-items: center; min-height: 48px; text-decoration: none; }
 .brand-logo { width: 14rem; height: auto; }
 .brand:hover .brand-logo { filter: brightness(1.07); }
-.main-nav { grid-column: 2; display: flex; flex-wrap: wrap; justify-content: center; gap: 0.25rem 1.75rem; }
+.main-nav { grid-column: 2; justify-self: end; display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 0.25rem 1.75rem; }
 .main-nav a { display: inline-flex; align-items: center; min-height: 48px; border: 0; text-decoration: none; color: #62625f; font-size: 0.95rem; text-transform: uppercase; }
 .main-nav a:hover, .main-nav a[aria-current] { color: #111111; }
 
@@ -328,7 +328,7 @@ input:user-invalid, textarea:user-invalid { border: 2px dashed #111111; }
   }
   /* An open phone menu remains aligned with the header after rotation. */
   @media (min-width: 44.001rem) {
-    .main-nav[popover]:popover-open { position: absolute; top: 5.5rem; left: 50%; right: auto; width: max-content; max-width: calc(100% - 4rem); transform: translateX(-50%); }
+    .main-nav[popover]:popover-open { position: absolute; top: 5.5rem; left: auto; right: max(2rem, calc((100vw - 1280px) / 2)); width: max-content; max-width: calc(100% - 4rem); transform: none; }
   }
 }
 
