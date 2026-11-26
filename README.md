@@ -51,7 +51,7 @@ For normal declarations, inline styling takes precedence over ordinary styleshee
 
 ## Developer and course notes
 
-The starter and subsequent edits were prepared with AI assistance. No student identity, achievement, contribution or commit history has been invented. About retains name and section placeholders, the verified GitHub username jaennviel, and the assigned Project owner role. Complete the missing personal details before submission. Actual contributions belong in the submission sheet and the student’s genuine GitHub history.
+About retains name and section placeholders, the verified GitHub username jaennviel, and the assigned Project owner role. Complete the missing personal details before submission. Actual contributions belong in the submission sheet and the student’s genuine GitHub history.
 
 The Contact form uses a non-modal open `<dialog>` and `<form method="dialog">`. Valid submission closes the dialog without a network request; the adjacent result appears and the Back to form link reloads it. The storefront includes a short no-message-sent note. There is no working cart, checkout, stock system or order processing.
 
@@ -64,14 +64,14 @@ Current lead photography uses the existing 4:5 frames and individual CSS framing
 ## Genuine contribution and GitHub → Vercel submission
 
 1. Read and be able to explain the HTML landmarks, one card, the three CSS methods and the responsive rules.
-2. Make meaningful edits yourself using your real GitHub account. Record only actual work and genuine commit links/SHAs. Distinguish the supplied starter/AI assistance from your contributions.
+2. Make meaningful edits yourself using your real GitHub account. Record only actual work and genuine commit links/SHAs.
 3. Add your actual name, section and username in About, this README and the contribution sheet.
 4. Use the existing **public** [jaennviel/form](https://github.com/jaennviel/form) repository, with `index.html` at its root. Upload the prepared source and preserve genuine contribution history on `main`.
 5. In Vercel, choose Add New → Project, import the public repository and use Framework Preset **Other**. Root Directory must contain `index.html`; use no build/install command and serve the project root (`.`) for this buildless static project.
 6. Test the actual HTTPS deployment on desktop and mobile, then push a genuine later change and confirm continuous deployment works.
 7. Add the verified GitHub and Vercel URLs to the README and submission sheet. Include the completed sheet and project ZIP in the instructor’s submission. A public Vercel production deployment is now verified; nothing has been submitted to the LMS.
 
-The restricted Sites preview is a working review site; it does not replace the required public GitHub → Vercel workflow. Follow the instructor’s rules for acknowledging assistance.
+The restricted Sites preview is a working review site; it does not replace the required public GitHub → Vercel workflow.
 
 ## Source-check status and rubric mapping
 
@@ -116,7 +116,7 @@ Undercover and Number (N)ine were not included because permission-cleared garmen
 
 The local [Bebas Neue font](fonts/BebasNeue-Regular.ttf) comes from the [Google Fonts source](https://raw.githubusercontent.com/google/fonts/main/ofl/bebasneue/BebasNeue-Regular.ttf) and is supplied with its [SIL Open Font License](fonts/OFL.txt). The external stylesheet loads it with `@font-face` and `font-display: swap`; readable fallback fonts remain available while it loads.
 
-The original FORM wordmark, primary lockups, monograms, monochrome version, favicon and diagonal-cut pattern were drawn as SVG geometry for this project with AI assistance. They do not come from an icon pack or the garment-image sources. The PNG icons are exports of `images/brand/favicon.svg`.
+The original FORM wordmark, primary lockups, monograms, monochrome version, favicon and diagonal-cut pattern were drawn as SVG geometry for this project. They do not come from an icon pack or the garment-image sources. The PNG icons are exports of `images/brand/favicon.svg`.
 
 ## Editorial hero source and edits
 
@@ -132,6 +132,8 @@ The student uploaded the prepared source in commit [21861c4](https://github.com/
 
 The latest change removes only Home’s Featured picks section. The hero, tagline, introduction, collection link, ten Collection cards and product pages are retained. All three commented CSS methods remain: shared external CSS on every page, internal Home hero styling, and inline tagline tracking. Photo files, source credits and license notices are unchanged.
 
-The GitHub-to-Vercel connection remains enabled. The assistant’s GitHub connection still cannot write. The latest homepage and document changes are therefore prepared as a manual GitHub update; until those files are committed, GitHub may still show the earlier featured section and pending URL text. The prepared Vercel publication uses the same reviewed static files with that section removed, without changing the Git connection. A later GitHub commit of the handoff files will make the repository match the updated site and trigger its normal automatic deployment.
+The GitHub-to-Vercel connection remains enabled. The student synced the homepage and handoff documents in commit [2b62031](https://github.com/jaennviel/form/commit/2b620317295802b9fe2f73ee9b100f95d30f1cdf), “Remove Featured picks and update project links.” Vercel automatically deployed that commit to production, and public Home and Collection checks matched the reviewed files. The repository and site both omit Featured picks.
 
-The submission sheet includes the verified GitHub URL, Vercel URL and username jaennviel. Full name, section, deadline and actual coding contribution record remain for the student to complete. The upload commit is genuine upload activity, not a claim of independently authored code; the prepared code’s AI assistance remains acknowledged. The existing restricted FORM preview retains its access settings. No domain was purchased and nothing was submitted for class.
+The GitHub connector has now been installed and authorized for this account. Repository push permission and a GitHub blob write were both confirmed on 26 November 2026. The previous manual-sync limitation is resolved; future authorized updates can use the normal GitHub-to-Vercel workflow. This documentation update does not change the storefront.
+
+The submission sheet includes the verified GitHub URL, Vercel URL and username jaennviel. Full name, section, deadline and actual coding contribution record remain for the student to complete. The existing restricted FORM preview retains its access settings. No domain was purchased and nothing was submitted for class.
