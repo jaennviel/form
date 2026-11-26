@@ -3,12 +3,12 @@
 A static concept storefront for CS001 / Introduction to Computing and Web Design. Plain HTML5 and CSS3 only; no JavaScript, framework, backend, database, installation or build step. Displayed prices are classroom reference values, not offers or appraisals. Every page states: “Concept store. Items are not for sale.”
 
 **Public GitHub repository:** https://github.com/jaennviel/form  
-**Live Vercel website:** PENDING — add the verified URL.  
+**Live Vercel website:** https://form-vert-psi.vercel.app  
 **Restricted working preview:** https://form-clothing-ipad.ciit-4080.chatgpt.site  
 **Section:** `[Your section]`  
 **Deadline:** `[Instructor to specify]`
 
-Solo work is instructor-approved, as confirmed by the student. One real member owns one category with ten distinct garments. Personal information, real contribution evidence and the final Vercel URL remain pending. The public GitHub repository is verified above.
+Solo work is instructor-approved, as confirmed by the student. One real member owns one category with ten distinct garments. The public GitHub repository and live Vercel URL are verified above. Personal information and genuine coding contribution evidence remain pending.
 
 | Member | GitHub username | Category | Owned page |
 | --- | --- | --- | --- |
@@ -18,14 +18,14 @@ Solo work is instructor-approved, as confirmed by the student. One real member o
 
 The complete supplied `1-Intro_to_Computing_Web_Design_Ecommerce_Project.docx` was reread on 25 November 2026, including all tables and the 100-point rubric. No storefront sentence is required to say “school project” or repeat the assignment explanation. About must retain the store story and member roles; Contact must retain labels, inputs and a submit button.
 
-The Home entry explicitly lists “Hero banner, store intro, featured picks, category links.” A compact two-item **Featured picks** section is therefore restored, despite the earlier design request to remove featured products. It uses existing garments and the existing card layout. The brief also requires a styled “View Details” or “Add to Cart” static link. Every card now visibly says **View details** inside its single existing product anchor. A clickable photograph alone is not treated as sufficient. No nested links, separate action buttons or fake cart were added.
+The Home blueprint lists “Hero banner, store intro, featured picks, category links.” Featured picks is omitted at the student’s latest explicit request. This is a documented exception to that Home blueprint, not a claim of full compliance. The brief requires a styled “View Details” or “Add to Cart” static link: each Collection card visibly says **View details** inside its single existing product anchor, with no nested link, separate button or fake cart.
 
 ## Files and basic use
 
 Open root `index.html` in a browser, or host the same relative-path files directly. No build command is needed.
 
 ```text
-index.html                        Hero, introduction, two featured picks, Collection links
+index.html                        Hero, introduction and Collection link
 category-1.html                   Single Collection page, all 10 garments
 product-form-01.html ... -10.html One garment per dedicated page
 about.html                        Store story, real member details/placeholders and assigned role
@@ -69,7 +69,7 @@ Current lead photography uses the existing 4:5 frames and individual CSS framing
 4. Use the existing **public** [jaennviel/form](https://github.com/jaennviel/form) repository, with `index.html` at its root. Upload the prepared source and preserve genuine contribution history on `main`.
 5. In Vercel, choose Add New → Project, import the public repository and use Framework Preset **Other**. Root Directory must contain `index.html`; use no build/install command and serve the project root (`.`) for this buildless static project.
 6. Test the actual HTTPS deployment on desktop and mobile, then push a genuine later change and confirm continuous deployment works.
-7. Add the verified GitHub and Vercel URLs to the README and submission sheet. Include the completed sheet and project ZIP in the instructor’s submission. Nothing has been submitted or published to public Vercel from this chat.
+7. Add the verified GitHub and Vercel URLs to the README and submission sheet. Include the completed sheet and project ZIP in the instructor’s submission. A public Vercel production deployment is now verified; nothing has been submitted to the LMS.
 
 The restricted Sites preview is a working review site; it does not replace the required public GitHub → Vercel workflow. Follow the instructor’s rules for acknowledging assistance.
 
@@ -81,7 +81,7 @@ The restricted Sites preview is a working review site; it does not replace the r
 | Three CSS methods — 25 | Shared stylesheet, Home head style, Home tagline inline tracking; code comments and explanation above | Source checked |
 | Catalog depth — 25 | One approved solo category, 10 distinct products with image/title/description/peso price and styled visible View details | Source checked |
 | UI/UX and responsiveness — 15 | Existing white theme, focus, contrast, 4:5 image handling, Grid/Flexbox and responsive rules | Source checked; browser/device verification pending |
-| GitHub and Vercel — 15 | Public GitHub repository verified; Vercel integration and actual student coding contributions still required | Partially complete; Vercel pending |
+| GitHub and Vercel — 15 | Public repository and production URL verified; GitHub upload commit automatically deployed on Vercel | Hosting verified; genuine student coding contribution evidence pending |
 
 Personal details, submission-sheet completion and genuine contribution history remain unverified. No browser controls are available in this managed session, so phone/iPad/desktop rendering, zoom layouts and interactive Contact submission are not claimed as tested. Source checks do not prove visual layout or publication success; live files are checked separately after restricted-preview publishing.
 
@@ -126,12 +126,12 @@ Local optimized files: [1600 × 1000 WebP](images/archive-rack-1600.webp) and [8
 
 Only this editorial hero has a CSS grayscale filter. Product files retain their source colors.
 
-## Restored version — 26 November 2026
+## Current publication and verification — 26 November 2026
 
-At the student’s request, the saved copy-cleanup version has been restored. It includes two Home featured picks listed in the assignment blueprint, visible page headings, ten Collection descriptions and small View details labels inside the single linked cards. Later card-description removals, hidden page titles and storefront-polish changes are reverted. The last working version was backed up separately. This restoration targets only the existing restricted preview; sharing settings, public GitHub/Vercel and submission status are unchanged. All original photo files and license credits are retained.
+The student uploaded the prepared source in commit [21861c4](https://github.com/jaennviel/form/commit/21861c4c52f7ab10187b340ebced87608ba0e544), “Add FORM Designer Archive website and product catalog.” Vercel automatically built that GitHub main-branch commit as a Ready production deployment. Public HTTP checks passed for Home, Collection, About, Contact, all ten product pages, the shared stylesheet, ten product images, the editorial hero and wordmark. All ten card/detail prices match and Back to collection links resolve. No browser/device visual tests or interactive Contact tests are claimed.
 
-Restoration checks on 26 November 2026: the entire supplied brief, including CSS and grading tables, was rechecked. All 44 saved project files were restored (with this README restoration note added). Checks passed for ten complete Collection cards, both featured links, all product/return links, local assets and HTML fragments, matching card/detail prices, retained credits/licenses, Contact labels and static form markup, About role placeholders, and all three commented CSS methods. Browser/device layouts and interactive Contact submission remain unverified because browser controls are unavailable. The public GitHub URL is now verified; the Vercel URL and genuine student contribution evidence remain pending.
+The latest change removes only Home’s Featured picks section. The hero, tagline, introduction, collection link, ten Collection cards and product pages are retained. All three commented CSS methods remain: shared external CSS on every page, internal Home hero styling, and inline tagline tracking. Photo files, source credits and license notices are unchanged.
 
-## GitHub repository — 26 November 2026
+The GitHub-to-Vercel connection remains enabled. The assistant’s GitHub connection still cannot write. The latest homepage and document changes are therefore prepared as a manual GitHub update; until those files are committed, GitHub may still show the earlier featured section and pending URL text. The prepared Vercel publication uses the same reviewed static files with that section removed, without changing the Git connection. A later GitHub commit of the handoff files will make the repository match the updated site and trigger its normal automatic deployment.
 
-The public repository is [jaennviel/form](https://github.com/jaennviel/form). Its existing initial commit is preserved. The prepared storefront commit is attributed to Codex and is currently local because GitHub denied the upload; it is not presented as the student’s own coding contribution. GitHub username jaennviel is verified from the connected account. The submission sheet includes the verified repository URL and username; full name, section, deadline and actual student contribution evidence remain pending. Vercel is not connected or deployed yet; its live URL and GitHub continuous-deployment verification remain pending. The restricted FORM preview remains separate and keeps its existing access settings.
+The submission sheet includes the verified GitHub URL, Vercel URL and username jaennviel. Full name, section, deadline and actual coding contribution record remain for the student to complete. The upload commit is genuine upload activity, not a claim of independently authored code; the prepared code’s AI assistance remains acknowledged. The existing restricted FORM preview retains its access settings. No domain was purchased and nothing was submitted for class.
