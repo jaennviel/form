@@ -88,11 +88,11 @@ p { margin-bottom: 1rem; }
 .product-card:hover .product-image img, .product-card:focus-within .product-image img { transform: translateY(-3px); }
 .product-image .badge { position: absolute; top: var(--space-3); right: var(--space-3); }
 .product-content { display: flex; flex: 1; flex-direction: column; padding-top: 1rem; }
-.product-topline { display: flex; flex-direction: column; align-items: flex-start; gap: var(--space-1); margin-bottom: var(--space-3); }
+.product-topline { display: flex; flex-direction: column; align-items: center; text-align: center; gap: var(--space-1); margin-bottom: var(--space-3); }
 /* Product titles use ordinary readable type, at the appropriate heading level. */
 .product-topline h2, .product-topline h3 { margin: 0; max-width: 100%; font: normal 1rem/1.35 var(--font-body); }
 .price { font-size: 0.95rem; font-weight: bold; font-variant-numeric: tabular-nums; }
-.product-topline .price { font-weight: normal; }
+.product-topline .price { font: normal 1rem/1.35 var(--font-body); font-variant-numeric: tabular-nums; }
 .product-content > p { color: var(--muted); font-size: 0.9rem; }
 .product-content > .text-link { align-self: flex-start; margin-top: auto; }
 
