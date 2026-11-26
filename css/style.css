@@ -181,10 +181,6 @@ input:user-invalid, textarea:user-invalid { border: 2px dashed #111111; }
   .section { padding-block: 2.5rem; }
   .page-intro { padding-top: 2.25rem; }
 }
-@media (max-width: 450px) {
-  .product-grid { grid-template-columns: minmax(0, 1fr); }
-  .product-image img { height: 340px; }
-}
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { transition: none !important; }
 }
@@ -366,3 +362,10 @@ input:user-invalid, textarea:user-invalid { border: 2px dashed #111111; }
 .about-collection-link:hover, .about-collection-link:focus-visible, .about-collection-link:active,
 .about-credit a:hover, .about-credit a:focus-visible, .about-credit a:active { color: var(--ink); text-decoration: none; }
 @media (max-width: 600px) { .about-story { padding-block: 1rem 3rem; } .about-credit { margin-top: 3rem; } }
+
+/* Phone Collection: two generous tap targets per row, with consistent 4:5 mats. */
+@media (max-width: 600px) {
+  .product-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2.5rem 1rem; }
+  .product-image img { position: absolute; inset: 0; }
+  .product-content { padding-top: 0.75rem; }
+}
