@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Contact FORM. Messages entered here are not sent or saved.">
+  <meta name="theme-color" content="#ffffff">
+  <title>Contact | FORM</title>
+  <!-- EXTERNAL CSS: shared layout, typography, navigation, footer and responsive cards. -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="images/brand/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="images/brand/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="apple-touch-icon" href="images/brand/apple-touch-icon.png" sizes="180x180">
+  <link rel="preload" href="fonts/BebasNeue-Regular.ttf" as="font" type="font/ttf" crossorigin>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header"><div class="wrap header-inner">
+    <a class="brand" href="index.html" aria-label="FORM home" translate="no"><img class="brand-logo" src="images/brand/logo-wordmark-dark.svg" alt="FORM" width="240" height="64"></a>
+    <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="category-1.html">Collection</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" aria-current="page">Contact</a>
+    </nav>
+  </div></header>
+  <main id="main" tabindex="-1">
+    <div class="wrap"><header class="page-intro"><h1>Contact</h1></header>
+      <section class="contact-section" aria-label="Inquiry form">
+        <!-- method="dialog" closes this initially open, non-modal dialog after
+             valid submission. It makes no network request and sends no data. -->
+        <dialog open class="inquiry-dialog" aria-labelledby="form-title" aria-describedby="form-help">
+          <h2 id="form-title">Inquiry form</h2><p class="form-note" id="form-help">This form does not send messages. Required fields are marked.</p>
+          <form method="dialog" aria-labelledby="form-title">
+            <div class="field"><label for="full-name">Full name <span>(required)</span></label><input id="full-name" name="full_name" type="text" autocomplete="name" maxlength="100" required></div>
+            <div class="field"><label for="email">Email address <span>(required)</span></label><input id="email" name="email" type="email" autocomplete="email" spellcheck="false" autocapitalize="none" maxlength="150" required></div>
+            <div class="field"><label for="subject">Subject <span>(required)</span></label><input id="subject" name="subject" type="text" autocomplete="off" maxlength="150" required></div>
+            <div class="field"><label for="message">Message <span>(required)</span></label><textarea id="message" name="message" rows="5" maxlength="1500" required></textarea></div>
+            <button class="button" type="submit">Submit inquiry</button>
+          </form>
+        </dialog>
+        <!-- The result appears when the adjacent dialog is closed by HTML. -->
+        <div class="demo-result" role="status"><h2>Form complete</h2><p>No message was sent or saved.</p><a class="button" href="contact.html">Back to form</a></div>
+      </section>
+    </div>
+  </main>
+  <footer class="site-footer"><div class="wrap footer-inner"><p>Concept store. Items are not for sale.</p></div></footer>
+</body>
+</html>

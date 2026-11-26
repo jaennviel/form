@@ -1,0 +1,244 @@
+/* EXTERNAL CSS: every HTML page uses this shared stylesheet.
+   It controls colors, typography, navigation, footer, responsive cards and hover states. */
+@font-face {
+  font-family: "Bebas Neue";
+  src: url("../fonts/BebasNeue-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+:root {
+  color-scheme: light;
+  --bg: #ffffff;
+  --panel: #ffffff;
+  --ink: #111111;
+  --muted: #444444;
+  --line: #e2e2e2;
+  --interactive: #000000;
+  --pressed: #333333;
+  --field-border: #767676;
+  --image-bg: #f2f2ef;
+  --font-body: Arial, Helvetica, sans-serif;
+  --display: "Bebas Neue", Impact, "Arial Narrow", sans-serif;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-14: 3.5rem;
+}
+
+/* 1. Base styles and accessible defaults. */
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 1rem/1.6 var(--font-body); }
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; text-underline-offset: 0.3em; }
+button, input, textarea { font: inherit; }
+a, button { touch-action: manipulation; }
+button { cursor: pointer; }
+h1, h2, h3, p { margin-top: 0; }
+h1, h2, h3 { line-height: 1.1; text-wrap: balance; overflow-wrap: anywhere; }
+h1, h2 { font-family: var(--display); font-weight: 400; }
+h1 { font-size: clamp(3rem, 1.5rem + 4vw, 6rem); }
+h2 { font-size: clamp(2rem, 1rem + 2.5vw, 3.5rem); }
+h3 { font-size: 1.05rem; }
+p { margin-bottom: 1rem; }
+::selection { background: var(--ink); color: var(--bg); }
+:focus-visible { outline: 3px solid var(--interactive); outline-offset: 5px; }
+[id] { scroll-margin-top: 1.5rem; }
+.wrap { width: min(100% - 4rem, 1280px); margin-inline: auto; }
+.muted { color: var(--muted); }
+.skip-link { position: absolute; top: -10rem; left: 1rem; z-index: 5; background: white; color: black; padding: 0.8rem 1rem; }
+.skip-link:focus { top: 1rem; }
+
+/* 2. One consistent header. Navigation wraps without JavaScript. */
+.site-header { background: var(--bg); color: #111111; }
+.header-inner { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 0.5rem 2rem; padding-block: 1rem; }
+.brand { display: inline-flex; align-items: center; min-height: 48px; text-decoration: none; }
+.brand-logo { width: 9rem; height: auto; }
+.brand:hover .brand-logo { filter: brightness(1.07); }
+.main-nav { display: flex; flex-wrap: wrap; gap: 0.25rem 1.75rem; }
+.main-nav a { display: inline-flex; align-items: center; min-height: 48px; border: 0; text-decoration: none; color: #62625f; font-size: 0.95rem; }
+.main-nav a:hover, .main-nav a[aria-current] { color: #111111; }
+
+/* 3. Shared actions and products. Grid sets the columns; Flexbox aligns card links. */
+.button { display: inline-flex; justify-content: center; align-items: center; max-width: 100%; min-height: 48px; padding: 0.8rem 1.4rem; border: 1px solid var(--ink); background: var(--ink); color: #ffffff; font-size: 0.9rem; font-weight: bold; text-decoration: none; overflow-wrap: anywhere; }
+.button:hover { background: var(--interactive); border-color: var(--interactive); text-decoration: underline; }
+.button:active { background: var(--pressed); border-color: var(--pressed); }
+.text-link { display: inline-flex; align-items: center; min-height: 48px; font-size: 0.9rem; font-weight: bold; }
+.text-link:hover { text-decoration-thickness: 2px; }
+.badge { display: inline-block; padding: var(--space-1) var(--space-3); border: 1px solid var(--line); background: var(--panel); color: var(--ink); font-size: 0.8rem; }
+.section { padding-block: var(--space-14); }
+.section-heading { display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 0.75rem 1.5rem; margin-bottom: 1.5rem; }
+.section-heading h2 { margin: 0; }
+.product-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--space-10) var(--space-6); }
+.product-card { display: flex; flex-direction: column; min-width: 0; overflow-wrap: anywhere; }
+.product-image { position: relative; background: var(--image-bg); }
+.product-image img { width: 100%; height: 310px; object-fit: contain; padding: 0.75rem; transition: transform 160ms; }
+.product-card:hover .product-image img, .product-card:focus-within .product-image img { transform: translateY(-3px); }
+.product-image .badge { position: absolute; top: var(--space-3); right: var(--space-3); }
+.product-content { display: flex; flex: 1; flex-direction: column; padding-top: 1rem; }
+.product-topline { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: var(--space-2) var(--space-3); margin-bottom: var(--space-3); }
+/* Product titles use ordinary readable type, at the appropriate heading level. */
+.product-topline h2, .product-topline h3 { margin: 0; max-width: 100%; font: bold 1rem/1.35 var(--font-body); }
+.price { font-size: 0.95rem; font-weight: bold; font-variant-numeric: tabular-nums; }
+.product-content > p { color: var(--muted); font-size: 0.9rem; }
+.product-content > .text-link { align-self: flex-start; margin-top: auto; }
+
+/* 4. Home. The page-specific hero background and grid are internal CSS. */
+.hero-image { margin: 0; min-width: 0; }
+.hero-image img { width: 100%; height: 440px; object-fit: contain; }
+.hero-copy { padding: 2.5rem; align-self: center; min-width: 0; }
+.hero-copy h1 { font-size: clamp(2.75rem, 1.5rem + 3vw, 5rem); margin-bottom: 1.25rem; }
+.hero-copy p { max-width: 30rem; color: var(--muted); }
+.hero-copy .brand-tagline { color: var(--ink); font-size: 1.25rem; line-height: 1.4; margin-bottom: var(--space-3); }
+.hero-copy .hero-collection-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 48px;
+  margin-top: 0.75rem;
+  color: #62625f;
+  font-size: 0.95rem;
+  text-decoration: none;
+}
+.hero-copy .hero-collection-link:hover,
+.hero-copy .hero-collection-link:focus-visible,
+.hero-copy .hero-collection-link:active { color: #111111; }
+
+/* 5. Category, product details and the required store/team story. */
+.page-intro { padding-block: 3rem 1.5rem; }
+.page-intro h1 { margin-bottom: 1rem; }
+.page-intro p { max-width: 43rem; color: var(--muted); }
+.catalog-section { padding-bottom: 3rem; }
+.product-detail { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; padding-block: 2.5rem; border-top: 1px solid var(--line); }
+.product-detail:target { border-top-color: var(--ink); }
+.detail-photo { background: var(--image-bg); }
+.detail-photo img { width: 100%; height: 480px; padding: 1rem; object-fit: contain; }
+.detail-copy h2 { margin-bottom: 1rem; }
+.detail-copy p { color: var(--muted); }
+.detail-copy .price { font-size: 1.25rem; color: var(--ink); }
+.detail-copy .button { margin-top: 0.75rem; }
+.story-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
+.story-layout figure { margin: 0; }
+.story-layout img { width: 100%; aspect-ratio: 4 / 3; object-fit: contain; }
+.prose p { color: var(--muted); }
+.team-card { padding: 1.5rem; border: 1px solid var(--line); }
+.team-card h3 { margin-bottom: 0.75rem; font-size: 1.25rem; }
+.team-card p:last-child { margin-bottom: 0; }
+.project-note { margin-top: 1rem; font-size: 0.875rem; color: var(--muted); }
+
+/* 6. Native HTML form demonstration: submit closes its open dialog.
+   The adjacent result then appears. No network request or JavaScript is used. */
+.contact-section { width: min(100%, 42rem); margin-inline: auto; padding-bottom: 3rem; }
+.inquiry-dialog { position: static; width: 100%; max-width: none; padding: 0; margin: 0; border: 0; background: transparent; color: inherit; }
+.inquiry-dialog[open] + .demo-result { display: none; }
+.inquiry-dialog h2 { margin-bottom: 0.75rem; }
+.form-note { color: var(--muted); font-size: 0.9rem; }
+.field { display: flex; flex-direction: column; gap: 0.4rem; margin-bottom: 1.25rem; }
+label { font-size: 0.95rem; font-weight: bold; }
+label span { color: var(--muted); font-weight: normal; }
+input, textarea { width: 100%; min-height: 48px; border: 1px solid var(--field-border); border-radius: 0; padding: 0.85rem; background: var(--panel); color: var(--ink); font-size: 1rem; }
+textarea { min-height: 150px; resize: vertical; }
+input:user-invalid, textarea:user-invalid { border: 2px dashed #111111; }
+.demo-result { padding: 1.5rem; border: 1px solid var(--line); }
+.demo-result p { color: var(--muted); }
+
+/* 7. One compact footer notice identifies the static demonstration. */
+.site-footer { margin-top: 1.5rem; border-top: 1px solid var(--line); }
+.footer-inner { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem 2rem; padding-block: 1.5rem; color: var(--muted); font-size: 0.875rem; }
+.footer-inner p { margin: 0; }
+
+/* 8. Responsive layouts keep source order and let text wrap naturally. */
+.product-detail > *, .story-layout > * { min-width: 0; }
+@media (max-width: 1100px) {
+  .product-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .product-image img { height: 290px; }
+}
+@media (max-width: 800px) {
+  .product-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .hero-copy { padding: 2rem; }
+  .product-detail, .story-layout { gap: 2rem; }
+}
+@media (max-width: 600px) {
+  .wrap { width: calc(100% - 2rem); }
+  .header-inner { gap: 0.25rem; }
+  .main-nav { width: 100%; justify-content: space-between; gap: 0.25rem; }
+  .hero-image img { height: 300px; }
+  .hero-copy { padding: 1.5rem; }
+  .product-detail, .story-layout { grid-template-columns: minmax(0, 1fr); gap: 1.5rem; }
+  .detail-photo img { height: 380px; }
+  .section { padding-block: 2.5rem; }
+  .page-intro { padding-top: 2.25rem; }
+}
+@media (max-width: 450px) {
+  .product-grid { grid-template-columns: minmax(0, 1fr); }
+  .product-image img { height: 340px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; }
+}
+
+/* Designer Archive: uniform full-garment frames and readable image attribution. */
+.hero-image { background: var(--image-bg); }
+.hero-image img { height: 480px; padding: 1rem; }
+.image-credit { padding: 0.75rem; font-size: 0.875rem; line-height: 1.5; overflow-wrap: anywhere; color: var(--muted); background: var(--panel); }
+.image-credit a { text-decoration: underline; }
+.detail-photo { margin: 0; min-width: 0; }
+.story-layout .about-photo img { height: 400px; aspect-ratio: auto; background: var(--image-bg); padding: 1rem; }
+.store-intro { max-width: 48rem; margin-top: 1.5rem; color: var(--muted); }
+.demo-label { font-size: 0.875rem; font-weight: normal; }
+@media (max-width: 600px) { .hero-image img { height: 360px; } }
+
+/* Dedicated product pages reuse the existing detail layout and title scale. */
+.detail-copy h1 { font-size: clamp(2rem, 1rem + 2.5vw, 3.5rem); margin-bottom: 1rem; }
+
+/* Photography-only refinement. Preserve the existing frames and page layout. */
+.hero-image img { padding: 0; object-fit: cover; object-position: 50% 50%; aspect-ratio: 8 / 5; filter: grayscale(1); }
+/* Trim the porcelain vest photo's surrounding studio border, not the garment. */
+.product-image img[src$="form-03.webp"],
+.detail-photo img[src$="form-03.webp"] { object-fit: cover; object-position: 51% 50%; }
+@media (max-width: 600px) { .hero-image img { object-position: 48% 50%; } }
+
+/* Collection lead photography: fixed editorial mats, with individual framing.
+   Product pages keep the original museum photograph and its full credit. */
+.product-image { aspect-ratio: 4 / 5; overflow: clip; background: #f5f5f3; }
+.product-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: auto;
+  object-fit: contain;
+  object-position: 50% 50%;
+  padding: 6%;
+  transition: none;
+}
+.product-card:hover .product-image img,
+.product-card:focus-within .product-image img { transform: none; }
+/* The flat-lay top can fill its card without cutting into the garment. */
+.product-image img[src$="form-04.webp"] { padding: 8%; }
+.product-image img[src$="form-05.webp"] { object-fit: cover; object-position: 51% 50%; padding: 8%; }
+/* Keep the porcelain intact while trimming its outer black studio frame. */
+.product-image img[src$="form-03.webp"] {
+  object-fit: cover;
+  object-position: 51% 50%;
+  padding: 0;
+}
+.product-image img[src$="form-03.webp"],
+.product-card:hover .product-image img[src$="form-03.webp"],
+.product-card:focus-within .product-image img[src$="form-03.webp"] { transform: scale(1.12); }
+/* The header uses the same dark focus ring as the white page content. */
+.site-header :focus-visible { outline-color: #111111; }
+@media (forced-colors: active) { .main-nav a[aria-current] { font-weight: bold; } }
+
+/* Light storefront: shared tokens keep every page, form and footer consistent. */
+.site-footer { background: var(--bg); }
+.product-link { display: flex; flex: 1; flex-direction: column; min-width: 0; color: inherit; text-decoration: none; }
+.product-link:hover h2, .product-link:hover h3,
+.product-link:focus-visible h2, .product-link:focus-visible h3 { text-decoration: underline; text-underline-offset: 0.2em; }
+.product-link:focus-visible { outline: 3px solid #111111; outline-offset: 5px; }
+
+/* Required static action wording remains inside the single product link. */
+.card-action { display: inline-block; align-self: flex-start; margin-top: auto; padding-top: 0.5rem; font-size: 0.875rem; font-weight: bold; text-decoration: underline; text-underline-offset: 0.25em; }
