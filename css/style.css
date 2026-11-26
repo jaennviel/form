@@ -331,3 +331,28 @@ input:user-invalid, textarea:user-invalid { border: 2px dashed #111111; }
     .main-nav[popover]:popover-open { position: absolute; top: 5.5rem; left: 50%; right: auto; width: max-content; max-width: calc(100% - 4rem); transform: translateX(-50%); }
   }
 }
+
+/* Product context and native information disclosure, shared by all ten pieces. */
+.product-context { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.5rem 2rem; padding-block: 1rem 0.5rem; }
+.breadcrumb { flex: 1 1 28rem; min-width: 0; }
+.breadcrumb ol { display: flex; flex-wrap: wrap; align-items: center; gap: 0.25rem 0.75rem; list-style: none; margin: 0; padding: 0; }
+.breadcrumb li { display: flex; align-items: center; gap: 0.75rem; min-width: 0; }
+.breadcrumb li:last-child { flex: 1 1 12rem; }
+.breadcrumb li + li::before { content: ""; display: block; width: 0.35rem; height: 0.35rem; flex: 0 0 0.35rem; border-top: 1px solid currentColor; border-right: 1px solid currentColor; transform: rotate(45deg); }
+.breadcrumb a, .adjacent-products a { display: inline-flex; align-items: center; min-height: 44px; color: #62625f; font-size: 0.875rem; line-height: 1.5; text-decoration: none; overflow-wrap: anywhere; }
+.breadcrumb a[aria-current] { color: var(--ink); font-weight: bold; }
+.breadcrumb a:hover, .breadcrumb a:focus-visible, .adjacent-products a:hover, .adjacent-products a:focus-visible { color: var(--ink); text-decoration: underline; }
+.adjacent-products { display: flex; flex: 0 0 auto; gap: 1.5rem; }
+.adjacent-products a { gap: 0.3rem; }
+.product-context + .product-detail { border-top: 0; padding-top: 1.5rem; align-items: start; }
+.product-information { margin-top: 2rem; border-block: 1px solid var(--line); }
+.product-information summary { display: flex; align-items: center; gap: 0.75rem; min-height: 56px; padding-block: 0.75rem; color: var(--ink); font-size: 0.95rem; list-style: none; cursor: pointer; }
+.product-information summary::-webkit-details-marker { display: none; }
+.product-information summary::marker { content: ""; }
+.product-information summary:hover { text-decoration: underline; text-underline-offset: 0.3em; }
+.product-information summary svg { flex: 0 0 20px; }
+.product-information[open] .plus-vertical { visibility: hidden; }
+.product-information-body { padding-block: 0.75rem 1rem; }
+.product-information-body > p:last-child { margin-bottom: 0; }
+.product-information .image-credit { margin-top: 1.5rem; padding: 0; }
+@media (forced-colors: active) { .breadcrumb a[aria-current] { text-decoration: underline; } }

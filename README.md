@@ -39,7 +39,7 @@ brand-guidelines.pdf             Implemented visual identity and usage
 contribution-submission-sheet.pdf Fillable/printable submission and actual-work record
 ```
 
-All ten Collection cards include the original image, title and peso price inside one clickable card. Short descriptions are omitted at the student’s latest explicit request; full descriptions remain on each dedicated product page. This is a documented exception to the brief’s per-card description requirement. Each single anchor is named from its garment heading; no separate View details label is displayed. All dedicated product pages retain the garment description, price, design note, photo attribution and Back to collection link. No garment substitutions from the separate research proposal have been applied.
+All ten Collection cards include the original image, title and peso price inside one clickable card. Short descriptions are omitted at the student’s latest explicit request; full descriptions remain on each dedicated product page. This is a documented exception to the brief’s per-card description requirement. Each single anchor is named from its garment heading; no separate View details label is displayed. All dedicated product pages retain the garment description, price, design note and complete photo attribution. A “Collection › product name” breadcrumb replaces the Back to collection button; Collection remains a working return link. Previous/Next links follow the displayed Collection order without wrapping at the ends. No garment substitutions from the separate research proposal have been applied.
 
 ## Explain all three CSS methods
 
@@ -141,3 +141,12 @@ The GitHub-to-Vercel connection remains enabled. The student synced the homepage
 The GitHub connector has now been installed and authorized for this account. Repository push permission and a GitHub blob write were both confirmed on 26 November 2026. The previous manual-sync limitation is resolved; future authorized updates can use the normal GitHub-to-Vercel workflow. This documentation update does not change the storefront.
 
 The submission sheet includes the verified GitHub URL, Vercel URL and username jaennviel. Full name, section, deadline and actual coding contribution record remain for the student to complete. The existing restricted FORM preview retains its access settings. No domain was purchased and nothing was submitted for class.
+
+
+## Product-page navigation and disclosure
+
+Each of the ten product pages has a labeled, ordered breadcrumb trail and separate Previous/Next product links. The first piece has only Next; the last has only Previous. The main header still marks Collection as active. No product, photo, crop, price or source wording changed.
+
+The photo, designer, title and PHP reference price stay visible. The description, “Why it’s here” note, and complete source/license credit sit in a single native `<details>` element labeled “Product information,” collapsed initially. Its decorative + becomes − when open. Click, Enter or Space toggles the `<summary>`; the browser exposes its expanded state without JavaScript. Full license links remain accessible inside the disclosure and are recorded in the image-source table above.
+
+Source checks confirmed that all original product paragraphs, images and credit links are preserved, all neighbor and collection destinations resolve, and the three CSS methods remain. Local Chromium checks passed at 320 × 740, 390 × 844, 768 × 1024, 1024 × 768 and 1440 × 1000 for accordion operation, focus, layout overflow and product/collection navigation. All ten pages also passed image-loading, disclosure and phone-header-menu checks. Physical Safari/iPad and assistive-technology verification remain pending.
