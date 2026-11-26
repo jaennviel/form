@@ -345,14 +345,15 @@ input:user-invalid, textarea:user-invalid { border: 2px dashed #111111; }
 .adjacent-products { display: flex; flex: 0 0 auto; gap: 1.5rem; }
 .adjacent-products a { gap: 0.3rem; }
 .product-context + .product-detail { border-top: 0; padding-top: 1.5rem; align-items: start; }
-.product-information { margin-top: 2rem; border-block: 1px solid var(--line); }
-.product-information summary { display: flex; align-items: center; gap: 0.75rem; min-height: 56px; padding-block: 0.75rem; color: var(--ink); font-size: 0.95rem; list-style: none; cursor: pointer; }
+.product-information-group { margin-top: 2rem; border-top: 1px solid var(--line); }
+.product-information { border-bottom: 1px solid var(--line); }
+.product-information summary { display: flex; align-items: center; gap: 0.75rem; min-height: 56px; padding-block: 0.75rem; color: #62625f; font-size: 0.95rem; text-transform: uppercase; text-decoration: none; list-style: none; cursor: pointer; }
 .product-information summary::-webkit-details-marker { display: none; }
 .product-information summary::marker { content: ""; }
-.product-information summary:hover { text-decoration: underline; text-underline-offset: 0.3em; }
+.product-information summary:hover, .product-information summary:focus-visible, .product-information summary:active { color: var(--ink); text-decoration: none; }
 .product-information summary svg { flex: 0 0 20px; }
 .product-information[open] .plus-vertical { visibility: hidden; }
 .product-information-body { padding-block: 0.75rem 1rem; }
 .product-information-body > p:last-child { margin-bottom: 0; }
-.product-information .image-credit { margin-top: 1.5rem; padding: 0; }
+.product-information .image-credit { margin-top: 0; padding: 0; }
 @media (forced-colors: active) { .breadcrumb a[aria-current] { text-decoration: underline; } }
