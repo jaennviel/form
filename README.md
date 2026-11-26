@@ -5,14 +5,15 @@ A static concept storefront for CS001 / Introduction to Computing and Web Design
 **Public GitHub repository:** https://github.com/jaennviel/form  
 **Live Vercel website:** https://form-vert-psi.vercel.app  
 **Restricted working preview:** https://form-clothing-ipad.ciit-4080.chatgpt.site  
-**Section:** `[Your section]`  
+**Section:** CS001 - 2
+
 **Deadline:** `[Instructor to specify]`
 
-Solo work is instructor-approved, as confirmed by the student. One real member owns one category with ten distinct garments. The public GitHub repository and live Vercel URL are verified above. Personal information and genuine coding contribution evidence remain pending.
+Solo work is instructor-approved, as confirmed by the student. One real member owns one category with ten distinct garments. The public GitHub repository and live Vercel URL are verified above. The member name and section were provided by the student; genuine coding contribution evidence remains pending.
 
 | Member | GitHub username | Category | Owned page |
 | --- | --- | --- | --- |
-| `[Your full name: Last Name, First Name]` | `jaennviel` | Designer Archive — 10 products | `category-1.html` |
+| Jaenn Viel F. Francisco | `jaennviel` | Designer Archive — 10 products | `category-1.html` |
 
 ## Assignment source and current requirements
 
@@ -51,7 +52,7 @@ For normal declarations, inline styling takes precedence over ordinary styleshee
 
 ## Developer and course notes
 
-About retains name and section placeholders, the verified GitHub username jaennviel, and the assigned Project owner role. Complete the missing personal details before submission. Actual contributions belong in the submission sheet and the student’s genuine GitHub history.
+About lists Jaenn Viel F. Francisco, section CS001 - 2, GitHub username jaennviel, and the assigned Project owner role. The store story and one-category, ten-product scope are retained. Actual contributions belong in the submission sheet and the student’s genuine GitHub history.
 
 The Contact form uses a non-modal open `<dialog>` and `<form method="dialog">`. Valid submission closes the dialog without a network request; the adjacent result appears and the Back to form link reloads it. The storefront includes a short no-message-sent note. There is no working cart, checkout, stock system or order processing.
 
@@ -69,7 +70,7 @@ Current lead photography uses the existing 4:5 frames and individual CSS framing
 
 1. Read and be able to explain the HTML landmarks, one card, the three CSS methods and the responsive rules.
 2. Make meaningful edits yourself using your real GitHub account. Record only actual work and genuine commit links/SHAs.
-3. Add your actual name, section and username in About, this README and the contribution sheet.
+3. Review your supplied name (Jaenn Viel F. Francisco), section (CS001 - 2) and username (jaennviel) in About, this README and the contribution sheet.
 4. Use the existing **public** [jaennviel/form](https://github.com/jaennviel/form) repository, with `index.html` at its root. Upload the prepared source and preserve genuine contribution history on `main`.
 5. In Vercel, choose Add New → Project, import the public repository and use Framework Preset **Other**. Root Directory must contain `index.html`; use no build/install command and serve the project root (`.`) for this buildless static project.
 6. Test the actual HTTPS deployment on desktop and mobile, then push a genuine later change and confirm continuous deployment works.
@@ -87,7 +88,7 @@ The restricted Sites preview is a working review site; it does not replace the r
 | UI/UX and responsiveness — 15 | Existing white theme, focus, contrast, 4:5 image handling, Grid/Flexbox and responsive rules | Source and local Chromium responsive navigation checks passed; physical-device testing pending |
 | GitHub and Vercel — 15 | Public repository and production URL verified; GitHub upload commit automatically deployed on Vercel | Hosting verified; genuine student coding contribution evidence pending |
 
-Personal details, submission-sheet completion and genuine contribution history remain unverified. The current navigation passed local Chromium checks at 320, 390, 704, 705, 768, 1024 and 1440 px widths, including full-screen phone presentation, Enter/Escape/close behavior, focus restoration, product navigation, active sections, and open-menu rotation to desktop and back. All fifteen pages passed phone menu open/close checks. These are viewport simulations; physical iPhone/iPad Safari and assistive-technology testing remain pending. Live source files are verified separately after deployment.
+The student supplied the displayed name and section. Submission-sheet completion and genuine coding contribution evidence remain unverified. The current navigation passed local Chromium checks at 320, 390, 704, 705, 768, 1024 and 1440 px widths, including full-screen phone presentation, Enter/Escape/close behavior, focus restoration, product navigation, active sections, and open-menu rotation to desktop and back. All fifteen pages passed phone menu open/close checks. These are viewport simulations; physical iPhone/iPad Safari and assistive-technology testing remain pending. Live source files are verified separately after deployment.
 
 ## Local image, logo and font sources
 
@@ -140,7 +141,7 @@ The GitHub-to-Vercel connection remains enabled. The student synced the homepage
 
 The GitHub connector has now been installed and authorized for this account. Repository push permission and a GitHub blob write were both confirmed on 26 November 2026. The previous manual-sync limitation is resolved; future authorized updates can use the normal GitHub-to-Vercel workflow. This documentation update does not change the storefront.
 
-The submission sheet includes the verified GitHub URL, Vercel URL and username jaennviel. Full name, section, deadline and actual coding contribution record remain for the student to complete. The existing restricted FORM preview retains its access settings. No domain was purchased and nothing was submitted for class.
+The submission sheet includes the verified GitHub URL, Vercel URL and username jaennviel. The supplied name and section are filled in. The deadline and actual coding contribution record remain for the student to complete. The existing restricted FORM preview retains its access settings. No domain was purchased and nothing was submitted for class.
 
 
 ## Product-page navigation and visible information
