@@ -62,7 +62,7 @@ p { margin-bottom: 1rem; }
 .brand-logo { width: 14rem; height: auto; }
 .brand:hover .brand-logo { filter: brightness(1.07); }
 .main-nav { grid-column: 2; display: flex; flex-wrap: wrap; justify-content: center; gap: 0.25rem 1.75rem; }
-.main-nav a { display: inline-flex; align-items: center; min-height: 48px; border: 0; text-decoration: none; color: #62625f; font-size: 0.95rem; }
+.main-nav a { display: inline-flex; align-items: center; min-height: 48px; border: 0; text-decoration: none; color: #62625f; font-size: 0.95rem; text-transform: uppercase; }
 .main-nav a:hover, .main-nav a[aria-current] { color: #111111; }
 
 /* Keep the same links visible on phones, below the logo. */
