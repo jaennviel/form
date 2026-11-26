@@ -57,9 +57,9 @@ p { margin-bottom: 1rem; }
 /* 2. Spacious shared header: centered navigation, with one HTML tree. */
 .site-header { background: var(--bg); color: #111111; }
 .header-inner { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: center; gap: 1rem; min-height: 14rem; padding-block: 2rem; }
-.header-inner > .brand { justify-self: start; min-width: 0; }
+.header-inner > .brand { justify-self: start; min-width: 0; max-width: 100%; }
 .brand { display: inline-flex; align-items: center; min-height: 48px; text-decoration: none; }
-.brand-logo { width: 9rem; height: auto; }
+.brand-logo { width: 14rem; height: auto; }
 .brand:hover .brand-logo { filter: brightness(1.07); }
 .main-nav { grid-column: 2; display: flex; flex-wrap: wrap; justify-content: center; gap: 0.25rem 1.75rem; }
 .main-nav a { display: inline-flex; align-items: center; min-height: 48px; border: 0; text-decoration: none; color: #62625f; font-size: 0.95rem; }
