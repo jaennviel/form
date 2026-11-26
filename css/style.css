@@ -257,3 +257,88 @@ input:user-invalid, textarea:user-invalid { border: 2px dashed #111111; }
   white-space: nowrap;
   border: 0;
 }
+
+/* Responsive header: one navigation tree at every screen size. */
+.header-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  grid-template-areas: "brand navigation finder";
+  gap: 0.5rem 1rem;
+}
+.header-inner > .brand { grid-area: brand; justify-self: start; min-width: 0; }
+.main-nav { grid-area: navigation; justify-content: center; min-width: 0; }
+.product-finder { grid-area: finder; justify-self: end; min-width: 0; }
+.finder-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  min-width: 48px;
+  min-height: 48px;
+  padding: 0;
+  list-style: none;
+  color: #62625f;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+.finder-toggle::-webkit-details-marker { display: none; }
+.finder-toggle::marker { content: ""; }
+.finder-toggle:hover, .finder-toggle:focus-visible { color: var(--ink); }
+.finder-open, .finder-close { display: inline-flex; align-items: center; gap: 0.5rem; }
+.finder-close { display: none; }
+.product-finder[open] .finder-open { display: none; }
+.product-finder[open] .finder-close { display: inline-flex; }
+.product-finder[open] > .finder-toggle {
+  position: fixed;
+  top: max(1rem, env(safe-area-inset-top));
+  right: max(2rem, calc((100vw - 1280px) / 2));
+  z-index: 102;
+  color: var(--ink);
+  background: var(--bg);
+}
+.product-finder:not([open]) .finder-panel { display: none; }
+.finder-panel {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  height: 100vh;
+  height: 100dvh;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding-block: max(1rem, env(safe-area-inset-top)) 3rem;
+  background: var(--bg);
+  color: var(--ink);
+}
+.finder-topline { display: flex; align-items: center; min-height: 48px; margin-bottom: 3rem; }
+.finder-brand { display: inline-flex; max-width: 60%; }
+.finder-brand img { width: 9rem; height: auto; }
+.finder-heading h2 { margin-bottom: 0.75rem; font-size: clamp(3rem, 2rem + 3vw, 5rem); }
+.finder-heading p { margin-bottom: 0; color: var(--muted); }
+.finder-index { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.75rem 3rem; margin-block: 2.5rem; }
+.finder-designer { min-width: 0; }
+.finder-designer h3 { margin: 0 0 0.25rem; font-size: 1.05rem; }
+.finder-designer ul { list-style: none; margin: 0; padding: 0; }
+.finder-designer a, .finder-all { display: inline-flex; align-items: center; min-height: 44px; text-decoration: none; }
+.finder-designer li a { color: var(--muted); font-size: 0.95rem; }
+.finder-designer a:hover, .finder-all:hover { color: var(--ink); text-decoration: underline; }
+.finder-all { font-weight: bold; }
+/* Hide the underlying page and its focus targets while the directory is open.
+   The native summary stays visible as Close; Enter/Space toggles it. */
+body:has(.product-finder[open]) { overflow: hidden; }
+body:has(.product-finder[open]) > .skip-link,
+.site-header:has(.product-finder[open]) .header-inner > .brand,
+.site-header:has(.product-finder[open]) .main-nav,
+.site-header:has(.product-finder[open]) ~ main,
+.site-header:has(.product-finder[open]) ~ footer { display: none; }
+@media (max-width: 60rem) {
+  .finder-index { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 44rem) {
+  .header-inner { grid-template-columns: minmax(0, 1fr) auto; grid-template-areas: "brand finder" "navigation navigation"; }
+  .main-nav { width: 100%; justify-content: space-between; gap: 0.25rem 0.5rem; }
+  .finder-trigger-text { position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+  .finder-index { grid-template-columns: minmax(0, 1fr); gap: 1.5rem; margin-block: 2rem; }
+  .finder-topline { margin-bottom: 2rem; }
+}
+@media (max-width: 600px) {
+  .product-finder[open] > .finder-toggle { right: 1rem; }
+}
