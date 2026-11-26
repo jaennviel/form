@@ -39,7 +39,7 @@ brand-guidelines.pdf             Implemented visual identity and usage
 contribution-submission-sheet.pdf Fillable/printable submission and actual-work record
 ```
 
-All ten Collection cards include the original image, title, short description and peso price inside one clickable card. Each single anchor is named from its garment heading; no separate View details label is displayed. All dedicated product pages retain the garment description, price, design note, photo attribution and Back to collection link. No garment substitutions from the separate research proposal have been applied.
+All ten Collection cards include the original image, title and peso price inside one clickable card. Short descriptions are omitted at the student’s latest explicit request; full descriptions remain on each dedicated product page. This is a documented exception to the brief’s per-card description requirement. Each single anchor is named from its garment heading; no separate View details label is displayed. All dedicated product pages retain the garment description, price, design note, photo attribution and Back to collection link. No garment substitutions from the separate research proposal have been applied.
 
 ## Explain all three CSS methods
 
@@ -79,7 +79,7 @@ The restricted Sites preview is a working review site; it does not replace the r
 | --- | --- | --- |
 | HTML5 structure and completeness — 20 | Home, one category, About, Contact and ten product pages; semantic landmarks and relative links | Source checked; no score guaranteed |
 | Three CSS methods — 25 | Shared stylesheet, Home head style, Home tagline inline tracking; code comments and explanation above | Source checked |
-| Catalog depth — 25 | One approved solo category, 10 products with images, titles, descriptions, peso prices and clickable cards | Source checked; named-action wording omitted at student request |
+| Catalog depth — 25 | One approved solo category, 10 products with images, titles, peso prices and clickable cards; full descriptions on product pages | Source checked; card descriptions and named-action wording omitted at student request |
 | UI/UX and responsiveness — 15 | Existing white theme, focus, contrast, 4:5 image handling, Grid/Flexbox and responsive rules | Source checked; browser/device verification pending |
 | GitHub and Vercel — 15 | Public repository and production URL verified; GitHub upload commit automatically deployed on Vercel | Hosting verified; genuine student coding contribution evidence pending |
 
