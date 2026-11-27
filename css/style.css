@@ -303,8 +303,12 @@ input:user-invalid, textarea:user-invalid { border: 2px dashed #111111; }
   }
 }
 
+/* Product pages end the header at its visible logo/menu row, so the context
+   row sits halfway between that row and the product content. */
+.product-header .header-inner { min-height: 0; padding-block: 5rem 0; }
+
 /* Product context and visible notes, shared by all ten pieces. */
-.product-context { display: flex; flex-wrap: nowrap; align-items: center; justify-content: space-between; gap: 0.5rem 1rem; padding-block: 1.5rem; }
+.product-context { display: flex; flex-wrap: nowrap; align-items: center; justify-content: space-between; gap: 0.5rem 1rem; padding-block: 4rem; }
 .breadcrumb { flex: 1 1 0; min-width: 0; }
 .breadcrumb ol { display: flex; flex-wrap: nowrap; align-items: center; gap: 0.25rem 0.75rem; list-style: none; margin: 0; padding: 0; }
 .breadcrumb li { display: flex; align-items: center; gap: 0.75rem; min-width: 0; }
@@ -320,6 +324,10 @@ input:user-invalid, textarea:user-invalid { border: 2px dashed #111111; }
 .product-nav-divider { color: #62625f; font-size: 0.875rem; }
 .adjacent-products a { gap: 0.3rem; white-space: nowrap; }
 .product-context + .product-detail { border-top: 0; padding-top: 0; align-items: start; }
+@media (max-width: 44rem) {
+  .product-header .header-inner { padding-top: 3rem; }
+  .product-context { padding-block: 3rem; }
+}
 .product-notes { margin-top: 2.5rem; }
 .product-notes .design-note { margin-top: 2rem; }
 .product-notes h2 { font: normal 1rem/1.5 var(--font-body); margin-bottom: 0.5rem; }
