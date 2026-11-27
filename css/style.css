@@ -344,3 +344,7 @@ input:user-invalid, textarea:user-invalid { border: 2px dashed #111111; }
   .product-image img { position: absolute; inset: 0; }
   .product-content { padding-top: 0.75rem; }
 }
+
+/* MAK requires direct attribution: these captions accompany the two unedited photos. */
+.required-photo-credit { display: block; margin-top: 0.75rem; color: #555555; font: normal 0.75rem/1.5 var(--font-body); overflow-wrap: anywhere; }
+.detail-photo .required-photo-credit { margin-bottom: 0; }
